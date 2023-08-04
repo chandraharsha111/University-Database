@@ -1,13 +1,10 @@
 /*
 Made Grade Details, OtherAv, JobRequirements fields Optional
 Added field Major/Minor Name(Study Title) 
-Added Teaching Assisignment Table to include many to many relationship between faculty and courses
-Corrected CourseInfo and Enrollmenet Deatils Relationship  
-Corrected my mistake of using seperate table for EnrollmentStatus and included EnrollmentStatus in Enrollment Table  
+Added Teaching Assignment Table to include many to many relationships between faculty and courses
+Corrected CourseInfo and Enrollment Details Relationship  
+Corrected my mistake of using the separate table for EnrollmentStatus and included EnrollmentStatus in Enrollment Table  
 */
-
-
-
 
 
 CREATE TABLE dbo.Address(
