@@ -241,7 +241,6 @@ CREATE TABLE dbo.CoursePrerequisites(
 
 DROP TABLE dbo.CoursePrerequisites
 
-
 INSERT INTO ADDRESS (Street1,Street2,City,State,ZipCode)
        VALUES ('111WestCott',NULL,'Syracuse','NewYork',13210),
 			  ('222WestCott',NULL,'Syracuse','NewYork',13210),
@@ -255,8 +254,6 @@ INSERT INTO ADDRESS (Street1,Street2,City,State,ZipCode)
 			  ('1050FayetteStreet',NULL,'Syracuse','NewYork',13202),
 			  ('1108ErnieDavis','SyracuseResidenceHall','Syracuse','NewYork',13210),
 			  ('1212Waltonstreet','DownTown','Syracuse','NewYork',13212);
-
-
 
 INSERT INTO PersonDetails(FirstName,MiddleName,LastName,NetId,DateOfBirth,SSN,EmailAddress,AddressId)
        VALUES ('Chandra','Harsha','Jupalli','cjupalli','1993-11-25','094045047','cjupalli@syr.edu',1),
@@ -272,15 +269,11 @@ INSERT INTO PersonDetails(FirstName,MiddleName,LastName,NetId,DateOfBirth,SSN,Em
 			  ('Prakhar',NULL,'Agarwal','pagarwal','1993-08-01','754354965','pararwal@syr.edu',11),
 			  ('John',NULL,'Walter','jwalter','1975-09-02','654567698','jwaiter@syr.edu',12);
 
-
-
-
 INSERT INTO StatusType(StatusTypeName)
        VALUES  ('undergraduate'),
 	           ('graduate'),
 			   ('matriculated'),
 			   ('graduated');
-
 
 INSERT INTO StudentInstance(StatusTypeId,Password,PersonId,AddressId)
        VALUES (2,'cjupalli',1,1),
@@ -290,7 +283,6 @@ INSERT INTO StudentInstance(StatusTypeId,Password,PersonId,AddressId)
 			  (1,'JCruz',5,5),
 			  (1,'pagarwal',11,11);
 
-
 INSERT INTO College(CollegeName)
        VALUES('LCSMITH College of Engineering'),
 	         ('ISchool'),
@@ -298,7 +290,6 @@ INSERT INTO College(CollegeName)
 			 ('SU College of Law'),
 			 ('SU College of PublicRelations'),
 			 ('School of Business');
-
 
 INSERT INTO Streams(IsMajor,CollegeId,StudyTitle)
        VALUES (1,1,'Computer Engineering'),
@@ -317,7 +308,6 @@ INSERT INTO MajorMinorDetails(StudentInstanceId,StreamId)
 				  (5,3),
 				  (6,6);
 
-
 INSERT INTO JobDetails(Title,MaximumPay,MinimumPay,JobDescription,IsUnionJob,JobRequirements)
        VALUES ('Professor',150000.00,100000.00,'Work on Research Projects and Teaches Courses',1,'Should finish PHD and have teaching experience of 4 years'),
 	          ('Assistant Professor',120000.00,80000.00,'Teaches courses primarily',0,'Should Finish Masters degree'),
@@ -326,24 +316,19 @@ INSERT INTO JobDetails(Title,MaximumPay,MinimumPay,JobDescription,IsUnionJob,Job
 			  ('Admission Officer',120000.00,150000.00,'Check if admission criteria is met',0,NULL),
 			  ('Dean',200000.00,150000.00,'Manages school of Business',0,'Experience in adminstration and teaching');
 
-
 INSERT INTO EmployeeStatus(EmployeeStatusType)
        VALUES ('Active'),
 	          ('Inactive');
-
-
 
 INSERT INTO SelectionType(SelectionTypeName)
        VALUES('Single'),
 	         ('Family'),
 			 ('Opt-out');
 
-
 INSERT INTO BenefitType(BenefitTypeName)
        VALUES('Health'),
 	         ('Vision'),
 			 ('Dental');
-
 
 INSERT INTO EmployeeBenefitDetails(Cost,SelectionTypeId,BenefitTypeId)
        VALUES (30000,1,1),
@@ -353,7 +338,6 @@ INSERT INTO EmployeeBenefitDetails(Cost,SelectionTypeId,BenefitTypeId)
 			   (2000,2,2),
 			   (3000,1,3);
 
-
 INSERT INTO EmployeeInstance(YearlyPay,EmployeeStatusId,JobDetailsId,PersonDetaildId)
             VALUES(145000.00,1,1,6),
 			      (115000.00,1,2,8),
@@ -362,7 +346,6 @@ INSERT INTO EmployeeInstance(YearlyPay,EmployeeStatusId,JobDetailsId,PersonDetai
 				  (135000.00,1,5,9),
 				  (180000.00,1,6,12);
 
-
 INSERT INTO BenefitDetails(BenefitDetailsid,EmployeeInstanceId)
        VALUES (1,1),
 	          (2,2),
@@ -370,7 +353,6 @@ INSERT INTO BenefitDetails(BenefitDetailsid,EmployeeInstanceId)
 			  (4,4),
 			  (5,5),
 			  (6,6);
-
 
 INSERT INTO GradeDetails(GradeDetailsType)
        VALUES('A'),
@@ -381,13 +363,11 @@ INSERT INTO GradeDetails(GradeDetailsType)
 			 ('C'),
 			 ('F');
 
-
 INSERT INTO EnrollmentStatus(EnrollmentStatusType)
        VALUES('Regular'),
 	         ('Audit'),
 			 ('Pass'),
 			 ('Fail');
-
 
 INSERT INTO CourseInfo(CourseCode,CourseNumber,CourseDescription,CourseTitle)
        VALUES ('CSE',581,'Get to work on real time Example of DataBases','Intro to DataBase Management '),
@@ -403,7 +383,6 @@ INSERT INTO CourseInfo(CourseCode,CourseNumber,CourseDescription,CourseTitle)
 			  ('PRL',555,'Intro on keeping relations','Intro to Public Relations Management'),
 			  ('MBA',654,'Understand techniques to manage inventory','Inventory Analysis'),
 			  ('BBA',566,'Introduce basic principles of Business Management','Introduction to Business Management');
-
 
 INSERT INTO EnrollmentDetails(StudentInstanceId,CourseInfoId,GradeDetailsId,EnrollmentStatusId)
        VALUES(1,6,3,3),
@@ -431,7 +410,6 @@ INSERT INTO DayOfWeekDetails(DayType)
 			 ('Saturday'),
 			 ('Sunday');
 
-
 INSERT INTO CourseTimingDetails(StartTime,EndTime,DayDetailsId)
        VALUES('08:00 AM','09:20 AM',1),
 	         ('08:00AM','09:20 AM',3),
@@ -440,18 +418,15 @@ INSERT INTO CourseTimingDetails(StartTime,EndTime,DayDetailsId)
 			 ('05:00 PM','08:00 PM',5),
 			 ('02:00 PM','05:00 PM',4);
 
-
 INSERT INTO ProjectorOptions(ProjectorOptionsType)
        VALUES ('Yes-Basic'),
 	          ('Yes-SmartBox'),
 			  ('No');
 
-
 INSERT INTO SemesterType(SemesterTypeName)
        VALUES ('Spring'),
 	          ('Summer'),
 			  ('Fall');
-
 
 INSERT INTO SemesterDetails(SemesterTypeId,PresentYear,StartDateOfClass,EndDateOfClass)
        VALUES(3,2016,'10-10-2016','12-16-2016'),
@@ -463,7 +438,6 @@ INSERT INTO SemesterDetails(SemesterTypeId,PresentYear,StartDateOfClass,EndDateO
 			 (2,2015,'05-05-2015','08-10-2015'),
 			 (2,2016,'06-05-2016','08-05-2016');
 
-
 INSERT INTO ClassRoom(BuildingName,RoomNumber,MaximumSeating,ProjectorOptionsId,WhiteBoardCount,OtherAV)
        VALUES ('LifeSciences',105,160,2,2,NULL),
 	          ('LinkHall',105,160,2,2,NULL),
@@ -472,7 +446,6 @@ INSERT INTO ClassRoom(BuildingName,RoomNumber,MaximumSeating,ProjectorOptionsId,
 			  ('MaxwellSchool',302,180,3,2,NULL),
 			  ('MaxwellSchool',402,160,2,3,NULL);
 
-
 INSERT INTO CourseSchedule(NoOfSeats,ClassRoomId,SemesterDetailsId,EmployeeInstanceId,CourseInfoId)
        VALUES(160,1,3,1,6),
 	          (140,2,3,3,2),
@@ -480,7 +453,6 @@ INSERT INTO CourseSchedule(NoOfSeats,ClassRoomId,SemesterDetailsId,EmployeeInsta
 			  (80,4,3,2,1),
 			  (50,5,3,5,5),
 			  (100,6,1,6,6);
-
 
 INSERT INTO TimingSchedule(CourseTimingId,CourseScheduleId)
        VALUES(1,1),
@@ -497,7 +469,6 @@ INSERT INTO CoursePrerequisites(CourseInfoId,CoursePrerequisitesId)
 			  (4,10),
 			  (5,11),
 			  (12,13);
-
 
 SELECT * FROM dbo.PersonDetails
 SELECT * FROM dbo.Address
@@ -604,11 +575,6 @@ CREATE FUNCTION dbo.EmployeeTeachingCourse(@CourseId AS INT)
 DROP FUNCTION dbo.EmployeeTeachingCourse
 SELECT dbo.EmployeeTeachingCourse(4)
 
-
-	
-
-
-
 --Function that takes CourseId as input and returns a table containing details of which days of week,at what time and where the course is taught
 CREATE FUNCTION dbo.CourseTimingInformation(@CourseId AS INT)
 RETURNS @return TABLE(CourseTitle VARCHAR(50),BuildingName VARCHAR(50),RoomNumber VARCHAR(50),StartTime TIME,EndTime TIME,DayType  VARCHAR(50))
@@ -628,7 +594,6 @@ RETURNS @return TABLE(CourseTitle VARCHAR(50),BuildingName VARCHAR(50),RoomNumbe
  END;
 
 SELECT * FROM dbo.CourseTimingInformation(3)
-
 
 --Procedure to update the salary of employees based on JobTitle
 CREATE PROCEDURE dbo.EmployeeSalaryIncrement(@EmployeeId AS INT)
