@@ -22,7 +22,7 @@
 
  
 ### Deliverable
-	* Your deliverable will be a single PDF document containing the optional explanation and your DB design.
+	Your deliverable will be a single PDF document containing the optional explanation and your DB design.
 
 Grading Outline 
 1. Design explanation (3 pts)
@@ -109,7 +109,6 @@ Classroom
 
 
 ## Database Implementation
-
 
 ### Requirements:
 1.	Design – you are expected to make design adjustments  based on my feedback and issues you identify while working on project. You are required to submit a brief  list of the modifications. If your design was perfect, and you didn’t need to make a single change, please state that.
